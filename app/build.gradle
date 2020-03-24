@@ -23,6 +23,23 @@ android {
         }
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    dexOptions {
+        preDexLibraries = false
+    }
+
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {

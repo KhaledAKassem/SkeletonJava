@@ -10,6 +10,7 @@ public class AppNetworkHelper implements NetworkHelper {
 
     @Inject
     public AppNetworkHelper(ApiService apiService) {
+        this.apiService=apiService;
     }
 
 }
