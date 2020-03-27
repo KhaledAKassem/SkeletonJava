@@ -6,7 +6,7 @@ import javax.inject.Singleton;
 @Singleton
 public class AppNetworkHelper implements NetworkHelper {
 
-    ApiService apiService;
+    public ApiService apiService;
 
     @Inject
     public AppNetworkHelper(ApiService apiService) {

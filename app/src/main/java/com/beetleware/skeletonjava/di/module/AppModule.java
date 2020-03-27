@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 
 import com.beetleware.skeletonjava.SkeletonJavaApp;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -19,7 +20,8 @@ import dagger.Provides;
 
 @Module
 public class AppModule {
-    public SkeletonJavaApp app ;
+
+    SkeletonJavaApp app ;
     public AppModule(SkeletonJavaApp app) {
         this.app = app;
     }

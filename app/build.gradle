@@ -49,7 +49,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     //life cycle + viewModel + LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$rootProject.ext.lifecycle_version"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
 
     //navigation
@@ -57,9 +59,11 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
 
     // Dagger
-    implementation "com.google.dagger:dagger:$rootProject.ext.dagger2_version"
-    implementation "com.google.dagger:dagger-android:$rootProject.ext.dagger2_version"
-    implementation "com.google.dagger:dagger-android-support:$rootProject.ext.dagger2_version"
+    implementation 'com.google.dagger:dagger-android:2.23'
+    implementation 'com.google.dagger:dagger-android-support:2.23' // if you use the support libraries
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.20'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.23'
+
 
     //networking
     implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit_version"
@@ -68,7 +72,8 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okHttp3_version"
 
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 }
